@@ -2,6 +2,8 @@
 
 Extract prominent colors from an image
 
+[![Build Status](https://travis-ci.org/leonardokl/react-palette.svg?branch=master)](https://travis-ci.org/leonardokl/react-palette)
+
 ## Install
 ```
 npm i -S react-palette
