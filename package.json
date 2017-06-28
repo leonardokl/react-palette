@@ -1,6 +1,6 @@
 {
   "name": "react-palette",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/react-palette.min.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "keywords": ["react", "palette", "dominant color"],
+  "keywords": [
+    "react",
+    "palette",
+    "dominant color"
+  ],
   "author": "Leonardo Luiz <leonardokl@hotmail.com>",
   "license": "ISC",
   "dependencies": {
