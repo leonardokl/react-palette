@@ -2,7 +2,15 @@
 
 Extract prominent colors from an image
 
+## Install
+```
+npm i -S react-palette
+```
+
+## Usage
 ```jsx
+import Palette from 'react-palette'
+// In your render...
 <Palette image={IMAGE_URL}>
   {palette => (
     <div style={{ color: palette.vibrant }}>
