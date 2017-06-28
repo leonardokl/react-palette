@@ -8,8 +8,7 @@
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
     "build": "webpack",
-    "preversion": "npm test",
-    "version": "npm run build",
+    "preversion": "npm test && npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
   "keywords": [
