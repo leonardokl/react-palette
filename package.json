@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest src/",
     "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
     "build": "webpack",
     "preversion": "npm test",
     "version": "npm run build",
