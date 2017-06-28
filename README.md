@@ -3,6 +3,7 @@
 Extract prominent colors from an image
 
 [![Build Status](https://travis-ci.org/leonardokl/react-palette.svg?branch=master)](https://travis-ci.org/leonardokl/react-palette)
+[![Coverage Status](https://coveralls.io/repos/github/leonardokl/react-palette/badge.svg?branch=master)](https://coveralls.io/github/leonardokl/react-palette?branch=master)
 
 ## Install
 ```
