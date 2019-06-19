@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "target": "es5",
+    "esModuleInterop": true
+  },
+  "exclude": ["src/__mocks__", "src/__tests__"]
+}
