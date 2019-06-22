@@ -12,15 +12,25 @@ npm i -S react-palette
 
 ## Usage
 ```jsx
-import Palette from 'react-palette'
+import Palette from 'react-palette';
 // In your render...
-<Palette image={IMAGE_URL}>
-  {palette => (
-    <div style={{ color: palette.vibrant }}>
+<Palette src={IMAGE_URL}>
+  {({ data, loading, error }) => (
+    <div style={{ color: data.vibrant }}>
       Text with the vibrant color
     </div>
   )}
 </Palette>
+```
+
+```jsx
+import { usePalette } from 'react-palette'
+
+const { data, loading, error } = usePalette(IMAGE_URL)
+
+<div style={{ color: data.vibrant }}>
+  Text with the vibrant color
+</div>
 ```
 
 ## Palette callback example
