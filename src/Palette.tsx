@@ -9,4 +9,8 @@ export type PaletteProps = {
 export const Palette: React.FC<PaletteProps> = ({
   src,
   children
-}: PaletteProps) => <>{children(usePalette(src))}</>;
+}: PaletteProps) => {
+  const palette = usePalette(src);
+
+  return <>{children(palette)}</>;
+};
