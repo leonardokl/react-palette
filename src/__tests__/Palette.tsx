@@ -1,18 +1,25 @@
 import { render, wait } from "@testing-library/react";
 import React from "react";
-import Palette, { getPalette } from "../";
+import { Palette, getPalette } from "../";
 
-test("execute children with palette when its loaded", async () => {
+test("execute children with palette", async () => {
   const children = jest.fn(() => null);
-  const image = 'test'
-  const palette = await getPalette(image);
+  const src = "test";
+  const palette = await getPalette(src);
 
-  render(<Palette image={image} children={children} />);
+  render(<Palette src={src} children={children} />);
 
-  expect(children).not.toHaveBeenCalled();
+  expect(children).toHaveBeenCalledWith({
+    loading: true,
+    error: undefined,
+    data: {}
+  });
 
   await wait();
 
-  expect(children).toHaveBeenCalledTimes(1);
-  expect(children).toHaveBeenCalledWith(palette);
+  expect(children).toHaveBeenCalledWith({
+    loading: false,
+    error: undefined,
+    data: palette
+  });
 });
