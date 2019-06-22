@@ -1,6 +1,6 @@
 {
   "name": "react-palette",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/react-palette.js",
   "umd:main": "dist/react-palette.umd.js",
