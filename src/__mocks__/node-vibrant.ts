@@ -11,6 +11,8 @@ const palette = {
   Vibrant: Swatch("#b4d43c")
 }
 
-export const from = () => ({
-  getPalette: () => Promise.resolve(palette)
-})
+export default {
+  from: () => ({
+    getPalette: async () => palette
+  })
+}

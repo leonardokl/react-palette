@@ -2,12 +2,16 @@
   "name": "react-palette",
   "version": "0.1.3",
   "description": "",
-  "main": "dist/react-palette.min.js",
+  "main": "dist/react-palette.js",
+  "umd:main": "dist/react-palette.umd.js",
+  "module": "dist/react-palette.mjs",
+  "browser": "dist/react-palette.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest src/",
+    "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
-    "build": "webpack",
+    "build": "microbundle",
     "preversion": "npm test && npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
@@ -26,25 +30,23 @@
     "dist",
     "src"
   ],
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "node-vibrant": "^3.0.0"
+    "lodash.camelcase": "^4.3.0",
+    "lodash.invoke": "^4.5.2",
+    "node-vibrant": "^3.1.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-jest": "^20.0.3",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babili-webpack-plugin": "^0.1.2",
-    "coveralls": "^2.13.1",
-    "enzyme": "^2.8.2",
-    "jest": "^20.0.4",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-test-renderer": "^15.5.4",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.0.0"
+    "@testing-library/react": "^8.0.1",
+    "@types/jest": "^24.0.15",
+    "@types/react": "^16.8.20",
+    "jest": "^24.8.0",
+    "microbundle": "^0.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2"
   }
 }
