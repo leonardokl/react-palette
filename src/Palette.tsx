@@ -9,11 +9,11 @@ type PaletteState = {
 
 export type PaletteProps = {
   image: string;
-  children(palette: any): ReactNode;
+  children(palette: PaletteColors): ReactNode;
 };
 
 export class Palette extends PureComponent<PaletteProps, PaletteState> {
-  state = {
+  state: PaletteState = {
     palette: {},
     loaded: false,
     error: undefined
