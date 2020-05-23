@@ -1,4 +1,5 @@
-import { useEffect, useReducer } from "react";
+import React from "react";
+const { useEffect, useReducer } = React;
 import { getPalette, PaletteColors } from "./getPalette";
 
 export type PaletteState = {
