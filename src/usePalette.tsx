@@ -28,15 +28,20 @@ export function usePalette(src: string) {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   React.useEffect(() => {
-    dispatch({ type: "getPalette" });
+    let subscribed = true;
+    !subscribed || dispatch({ type: "getPalette" });
 
     getPalette(src)
       .then((palette) => {
-        dispatch({ type: "resolvePalette", payload: palette });
+        !subscribed || dispatch({ type: "resolvePalette", payload: palette });
       })
       .catch((ex) => {
-        dispatch({ type: "rejectPalette", payload: ex });
+        !subscribed || dispatch({ type: "rejectPalette", payload: ex });
       });
+    
+    return () => {
+      subscribed = false;
+    };
   }, [src]);
 
   return state;
