@@ -21,6 +21,8 @@ function reducer(state: PaletteState, action): PaletteState {
       return { ...state, data: action.payload, loading: false };
     case "rejectPalette":
       return { ...state, error: action.payload, loading: false };
+    case "resetPalette":
+      return initialState;
   }
 }
 
@@ -37,6 +39,10 @@ export function usePalette(src: string) {
       .catch((ex) => {
         dispatch({ type: "rejectPalette", payload: ex });
       });
+    
+    return () => {
+      dispatch({ type: "resetPalette" })
+    }
   }, [src]);
 
   return state;
